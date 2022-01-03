@@ -1,27 +1,31 @@
-import os
+import os 
 from distutils.util import strtobool
 
 from django.utils.translation import gettext_lazy as _
 from dotenv import load_dotenv, find_dotenv
+from pathlib import Path
+
+import environ
+
+env = environ.Env()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(
-    os.path.dirname(
-        os.path.dirname(
-            os.path.abspath(__file__)
-        )
-    )
-)
-
+BASE_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
+env.read_env(BASE_DIR / ".env")
 # Environment variables
 # Check for and load environment variables from a .env file.
+READ_DOT_ENV_FILE = env.bool("DJANGO_READ_DOT_ENV_FILE", default=False)
+if READ_DOT_ENV_FILE:
+    # OS environment variables take precedence over variables from .env
+    env.read_env(str(BASE_DIR / ".env"))
+
 
 load_dotenv(find_dotenv())
 
 # Required settings
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')
-SECRET_KEY = os.environ.get('SECRET_KEY') or None
+ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS').split(',')
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY') or None
 DEBUG = bool(strtobool(os.environ.get('DEBUG') or 'False'))
 
 
@@ -86,8 +90,12 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
-        'APP_DIRS': True,
+        
         'OPTIONS': {
+            "loaders": [
+                "django.template.loaders.filesystem.Loader",
+                "django.template.loaders.app_directories.Loader",
+            ],
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
@@ -99,24 +107,29 @@ TEMPLATES = [
 ]
 
 
-# Database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+# # Database
+# # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-config = {
-    'ENGINE': os.getenv('DB_ENGINE') or 'django.db.backends.sqlite3',
-    'NAME': os.getenv('DB_NAME') or os.path.join(BASE_DIR, 'data/db.sqlite3')
-}
-if os.getenv('DB_USER'):
-    config['USER'] = os.getenv('DB_USER')
-if os.environ.get('DB_PASSWORD') or os.environ.get('POSTGRES_PASSWORD'):
-    config['PASSWORD'] = os.environ.get('DB_PASSWORD') or os.environ.get('POSTGRES_PASSWORD')
-if os.getenv('DB_HOST'):
-    config['HOST'] = os.getenv('DB_HOST')
-if os.getenv('DB_PORT'):
-    config['PORT'] = os.getenv('DB_PORT')
+# config = {
+#     'ENGINE': os.getenv('DB_ENGINE') or 'django.db.backends.sqlite3',
+#     'NAME': os.getenv('DB_NAME') or os.path.join(BASE_DIR, 'data/db.sqlite3')
+# }
+# if os.getenv('DB_USER'):
+#     config['USER'] = os.getenv('DB_USER')
+# if os.environ.get('DB_PASSWORD') or os.environ.get('POSTGRES_PASSWORD'):
+#     config['PASSWORD'] = os.environ.get('DB_PASSWORD') or os.environ.get('POSTGRES_PASSWORD')
+# if os.getenv('DB_HOST'):
+#     config['HOST'] = os.getenv('DB_HOST')
+# if os.getenv('DB_PORT'):
+#     config['PORT'] = os.getenv('DB_PORT')
 
-DATABASES = {'default': config}
+# DATABASES = {'default': config}
 
+# DATABASES
+# ------------------------------------------------------------------------------
+# https://docs.djangoproject.com/en/dev/ref/settings/#databases
+DATABASES = {"default": env.db("DATABASE_URL")}
+DATABASES["default"]["ATOMIC_REQUESTS"] = True
 
 # Cache
 # https://docs.djangoproject.com/en/3.0/topics/cache/
@@ -223,15 +236,15 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = 'media/'
 
-AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME') or None
+# AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME') or None
 
-AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID') or None
+# AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID') or None
 
-AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY') or None
+# AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY') or None
 
-if AWS_STORAGE_BUCKET_NAME:
-    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-    THUMBNAIL_DEFAULT_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# if AWS_STORAGE_BUCKET_NAME:
+#     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+#     THUMBNAIL_DEFAULT_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
 # Security
