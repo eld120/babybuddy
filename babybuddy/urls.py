@@ -59,3 +59,7 @@ if settings.DEBUG:  # pragma: no cover
         settings.MEDIA_URL,
         document_root=settings.MEDIA_ROOT
     )
+    if "debug_toolbar" in settings.INSTALLED_APPS:
+        import debug_toolbar
+
+        urlpatterns = [path("__debug__/", include(debug_toolbar.urls))] + urlpatterns
