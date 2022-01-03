@@ -1,9 +1,10 @@
 #!/usr/bin/env python
-import sys
+import sys, os
 
 from dotenv import load_dotenv, find_dotenv
 
 if __name__ == "__main__":
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.local")
 
     # Environment variables
     # Check for and load environment variables from a .env file.
