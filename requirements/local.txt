@@ -1,6 +1,0 @@
--r base.txt
-
-Werkzeug==2.0.2 # https://github.com/pallets/werkzeug
-django-debug-toolbar==3.2.2  # https://github.com/jazzband/django-debug-toolbar
-watchgod==0.7  # https://github.com/samuelcolvin/watchgod
-psycopg2==2.9.1  # https://github.com/psycopg/psycopg2
