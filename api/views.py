@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 from rest_framework import viewsets
+from rest_framework.decorators import action
+from rest_framework.response import Response
 
 from core import models
 
@@ -48,6 +50,18 @@ class TimerViewSet(viewsets.ModelViewSet):
     queryset = models.Timer.objects.all()
     serializer_class = serializers.TimerSerializer
     filterset_class = filters.TimerFilter
+
+    @action(detail=True, methods=['patch'])
+    def stop(self, request, pk=None):
+        timer = self.get_object()
+        timer.stop()
+        return Response(self.serializer_class(timer).data)
+
+    @action(detail=True, methods=['patch'])
+    def restart(self, request, pk=None):
+        timer = self.get_object()
+        timer.restart()
+        return Response(self.serializer_class(timer).data)
 
 
 class TummyTimeViewSet(TimerFieldSupportMixin, viewsets.ModelViewSet):
