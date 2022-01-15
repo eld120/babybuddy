@@ -33,7 +33,7 @@
         },
         "TIME_ZONE": {
             "description": "Sets the instance default time zone.",
-            "value": "UTC"
+            "value": "America/Chicago"
         }
     },
     "scripts": {

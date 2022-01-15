@@ -1,6 +1,6 @@
 {% extends 'babybuddy/page.html' %}
 {% load datetime duration i18n widget_tweaks %}
-
+{% load tz %}
 {% block title %}{% trans "Feedings" %}{% endblock %}
 
 {% block breadcrumbs %}
@@ -54,7 +54,8 @@
 
                             </div>
                         </td>
-                        <th scope="row">{{ feeding.start|datetime_short }}</th>
+                        
+                        <th scope="row">{{ feeding.start|localtime }}</th>
                         {% if not unique_child %}
                             <td><a href="{% url 'core:child' feeding.child.slug %}">{{ feeding.child }}</a></td>
                         {% endif %}
@@ -66,6 +67,7 @@
                             {% endif %}
                         </td>
                         <td>{{ feeding.duration|duration_string }}</td>
+                        
                     </tr>
                     {% if feeding.notes %}
                         <tr class="{{ row_class }} row-details">
