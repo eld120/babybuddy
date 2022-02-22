@@ -45,7 +45,7 @@ app_patterns = [
 ]
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('SNyQPXNYp0cUhEyeWE9fDugRno4zEF8zH7pJplGkWJo/', admin.site.urls), #ADMIN URL
     path('', include('api.urls', namespace='api')),
     path('', include((app_patterns, 'babybuddy'), namespace='babybuddy')),
     path('user/lang', include('django.conf.urls.i18n')),
