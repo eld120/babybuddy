@@ -415,5 +415,8 @@ sentry_sdk.init(
     dsn=SENTRY_DSN,
     integrations=integrations,
     environment=env("SENTRY_ENVIRONMENT", default="production"),
-    traces_sample_rate=env.float("SENTRY_TRACES_SAMPLE_RATE", default=0.0),
+    #traces_sample_rate=env.float("SENTRY_TRACES_SAMPLE_RATE", default=0.0),
+    traces_sample_rate=1.0
 )
+
+ADMIN_URL = env("DJANGO_ADMIN_URL")
