@@ -234,7 +234,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 WHITENOISE_ROOT = os.path.join(BASE_DIR, 'static', 'babybuddy', 'root')
 
+<<<<<<< HEAD
 WHITENOISE_MANIFEST_STRICT = False
+=======
+>>>>>>> parent of b1a14ef (running collectstatic, might have to roll back)
 
 # Media files (User uploaded content)
 # https://docs.djangoproject.com/en/3.0/topics/files/
