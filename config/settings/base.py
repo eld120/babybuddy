@@ -234,7 +234,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 WHITENOISE_ROOT = os.path.join(BASE_DIR, 'static', 'babybuddy', 'root')
 
-
+WHITENOISE_MANIFEST_STRICT = False
 
 # Media files (User uploaded content)
 # https://docs.djangoproject.com/en/3.0/topics/files/
