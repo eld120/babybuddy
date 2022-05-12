@@ -329,19 +329,19 @@ paths:
       - name: date
         required: false
         in: query
-        description: Date
+        description: DateTime
         schema:
           type: string
       - name: date_max
         required: false
         in: query
-        description: Max. Date
+        description: Max. DateTime
         schema:
           type: string
       - name: date_min
         required: false
         in: query
-        description: Min. Date
+        description: Min. DateTime
         schema:
           type: string
       - name: solid
@@ -354,6 +354,12 @@ paths:
         required: false
         in: query
         description: wet
+        schema:
+          type: string
+      - name: tags
+        required: false
+        in: query
+        description: tag
         schema:
           type: string
       responses:
@@ -444,7 +450,7 @@ paths:
       - name: date
         required: false
         in: query
-        description: Date
+        description: DateTime
         schema:
           type: string
       - name: date_max
@@ -456,7 +462,7 @@ paths:
       - name: date_min
         required: false
         in: query
-        description: Min. Date
+        description: Min. DateTime
         schema:
           type: string
       - name: solid
@@ -469,6 +475,12 @@ paths:
         required: false
         in: query
         description: wet
+        schema:
+          type: string
+      - name: tags
+        required: false
+        in: query
+        description: tag
         schema:
           type: string
       responses:
@@ -516,7 +528,7 @@ paths:
       - name: date
         required: false
         in: query
-        description: Date
+        description: DateTime
         schema:
           type: string
       - name: date_max
@@ -528,7 +540,7 @@ paths:
       - name: date_min
         required: false
         in: query
-        description: Min. Date
+        description: Min. DateTime
         schema:
           type: string
       - name: solid
@@ -541,6 +553,12 @@ paths:
         required: false
         in: query
         description: wet
+        schema:
+          type: string
+      - name: tags
+        required: false
+        in: query
+        description: tag
         schema:
           type: string
       requestBody:
@@ -605,13 +623,13 @@ paths:
       - name: date_max
         required: false
         in: query
-        description: Max. Date
+        description: Max. DateTime
         schema:
           type: string
       - name: date_min
         required: false
         in: query
-        description: Min. Date
+        description: Min. DateTime
         schema:
           type: string
       - name: solid
@@ -624,6 +642,12 @@ paths:
         required: false
         in: query
         description: wet
+        schema:
+          type: string
+      - name: tags
+        required: false
+        in: query
+        description: tag
         schema:
           type: string
       requestBody:
@@ -688,13 +712,13 @@ paths:
       - name: date_max
         required: false
         in: query
-        description: Max. Date
+        description: Max. DateTime
         schema:
           type: string
       - name: date_min
         required: false
         in: query
-        description: Min. Date
+        description: Min. DateTime
         schema:
           type: string
       - name: solid
@@ -707,6 +731,12 @@ paths:
         required: false
         in: query
         description: wet
+        schema:
+          type: string
+      - name: tags
+        required: false
+        in: query
+        description: tag
         schema:
           type: string
       responses:
@@ -746,13 +776,13 @@ paths:
       - name: end_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: end_min
         required: false
         in: query
-        description: Min. End Date
+        description: Min. End DateTime
         schema:
           type: string
       - name: method
@@ -771,19 +801,19 @@ paths:
       - name: start
         required: false
         in: query
-        description: Start Date
+        description: Start DateTime
         schema:
           type: string
       - name: start_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: start_min
         required: false
         in: query
-        description: Min. Start Date
+        description: Min. Start DateTime
         schema:
           type: string
       - name: type
@@ -797,6 +827,12 @@ paths:
           - formula
           - fortified breast milk
           - solid food
+      - name: tags
+        required: false
+        in: query
+        description: tag
+        schema:
+          type: string
       responses:
         '200':
           content:
@@ -868,19 +904,19 @@ paths:
       - name: end
         required: false
         in: query
-        description: End Date
+        description: End DateTime
         schema:
           type: string
       - name: end_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: end_min
         required: false
         in: query
-        description: Min. End Date
+        description: Min. End DateTime
         schema:
           type: string
       - name: method
@@ -899,19 +935,19 @@ paths:
       - name: start
         required: false
         in: query
-        description: Start Date
+        description: Start DateTime
         schema:
           type: string
       - name: start_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: start_min
         required: false
         in: query
-        description: Min. Start Date
+        description: Min. Start DateTime
         schema:
           type: string
       - name: type
@@ -925,6 +961,12 @@ paths:
           - formula
           - fortified breast milk
           - solid food
+      - name: tags
+        required: false
+        in: query
+        description: tag
+        schema:
+          type: string
       responses:
         '200':
           content:
@@ -953,19 +995,19 @@ paths:
       - name: end
         required: false
         in: query
-        description: End Date
+        description: End DateTime
         schema:
           type: string
       - name: end_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: end_min
         required: false
         in: query
-        description: Min. End Date
+        description: Min. End DateTime
         schema:
           type: string
       - name: method
@@ -984,19 +1026,19 @@ paths:
       - name: start
         required: false
         in: query
-        description: Start Date
+        description: Start DateTime
         schema:
           type: string
       - name: start_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: start_min
         required: false
         in: query
-        description: Min. Start Date
+        description: Min. Start DateTime
         schema:
           type: string
       - name: type
@@ -1010,6 +1052,12 @@ paths:
           - formula
           - fortified breast milk
           - solid food
+      - name: tags
+        required: false
+        in: query
+        description: tag
+        schema:
+          type: string
       requestBody:
         content:
           application/json:
@@ -1049,19 +1097,19 @@ paths:
       - name: end
         required: false
         in: query
-        description: End Date
+        description: End DateTime
         schema:
           type: string
       - name: end_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: end_min
         required: false
         in: query
-        description: Min. End Date
+        description: Min. End DateTime
         schema:
           type: string
       - name: method
@@ -1080,19 +1128,19 @@ paths:
       - name: start
         required: false
         in: query
-        description: Start Date
+        description: Start DateTime
         schema:
           type: string
       - name: start_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: start_min
         required: false
         in: query
-        description: Min. Start Date
+        description: Min. Start DateTime
         schema:
           type: string
       - name: type
@@ -1106,6 +1154,12 @@ paths:
           - formula
           - fortified breast milk
           - solid food
+      - name: tags
+        required: false
+        in: query
+        description: tag
+        schema:
+          type: string
       requestBody:
         content:
           application/json:
@@ -1145,19 +1199,19 @@ paths:
       - name: end
         required: false
         in: query
-        description: End Date
+        description: End DateTime
         schema:
           type: string
       - name: end_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: end_min
         required: false
         in: query
-        description: Min. End Date
+        description: Min. End DateTime
         schema:
           type: string
       - name: method
@@ -1176,19 +1230,19 @@ paths:
       - name: start
         required: false
         in: query
-        description: Start Date
+        description: Start DateTime
         schema:
           type: string
       - name: start_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: start_min
         required: false
         in: query
-        description: Min. Start Date
+        description: Min. Start DateTime
         schema:
           type: string
       - name: type
@@ -1202,6 +1256,12 @@ paths:
           - formula
           - fortified breast milk
           - solid food
+      - name: tags
+        required: false
+        in: query
+        description: tag
+        schema:
+          type: string
       responses:
         '204':
           description: ''
@@ -1233,19 +1293,25 @@ paths:
       - name: date
         required: false
         in: query
-        description: Date
+        description: DateTime
         schema:
           type: string
       - name: date_max
         required: false
         in: query
-        description: Max. Date
+        description: Max. DateTime
         schema:
           type: string
       - name: date_min
         required: false
         in: query
-        description: Min. Date
+        description: Min. DateTime
+        schema:
+          type: string
+      - name: tags
+        required: false
+        in: query
+        description: tag
         schema:
           type: string
       responses:
@@ -1319,19 +1385,25 @@ paths:
       - name: date
         required: false
         in: query
-        description: Date
+        description: DateTime
         schema:
           type: string
       - name: date_max
         required: false
         in: query
-        description: Max. Date
+        description: Max. DateTime
         schema:
           type: string
       - name: date_min
         required: false
         in: query
-        description: Min. Date
+        description: Min. DateTime
+        schema:
+          type: string
+      - name: tags
+        required: false
+        in: query
+        description: tag
         schema:
           type: string
       responses:
@@ -1362,19 +1434,25 @@ paths:
       - name: date
         required: false
         in: query
-        description: Date
+        description: DateTime
         schema:
           type: string
       - name: date_max
         required: false
         in: query
-        description: Max. Date
+        description: Max. DateTime
         schema:
           type: string
       - name: date_min
         required: false
         in: query
-        description: Min. Date
+        description: Min. DateTime
+        schema:
+          type: string
+      - name: tags
+        required: false
+        in: query
+        description: tag
         schema:
           type: string
       requestBody:
@@ -1416,19 +1494,25 @@ paths:
       - name: date
         required: false
         in: query
-        description: Date
+        description: DateTime
         schema:
           type: string
       - name: date_max
         required: false
         in: query
-        description: Max. Date
+        description: Max. DateTime
         schema:
           type: string
       - name: date_min
         required: false
         in: query
-        description: Min. Date
+        description: Min. DateTime
+        schema:
+          type: string
+      - name: tags
+        required: false
+        in: query
+        description: tag
         schema:
           type: string
       requestBody:
@@ -1470,19 +1554,25 @@ paths:
       - name: date
         required: false
         in: query
-        description: Date
+        description: DateTime
         schema:
           type: string
       - name: date_max
         required: false
         in: query
-        description: Max. Date
+        description: Max. DateTime
         schema:
           type: string
       - name: date_min
         required: false
         in: query
-        description: Min. Date
+        description: Min. DateTime
+        schema:
+          type: string
+      - name: tags
+        required: false
+        in: query
+        description: tag
         schema:
           type: string
       responses:
@@ -1516,37 +1606,43 @@ paths:
       - name: end
         required: false
         in: query
-        description: End Date
+        description: End DateTime
         schema:
           type: string
       - name: end_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: end_min
         required: false
         in: query
-        description: Min. End Date
+        description: Min. End DateTime
         schema:
           type: string
       - name: start
         required: false
         in: query
-        description: Start Date
+        description: Start DateTime
         schema:
           type: string
       - name: start_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: start_min
         required: false
         in: query
-        description: Min. Start Date
+        description: Min. Start DateTime
+        schema:
+          type: string
+      - name: tags
+        required: false
+        in: query
+        description: tag
         schema:
           type: string
       responses:
@@ -1620,37 +1716,43 @@ paths:
       - name: end
         required: false
         in: query
-        description: End Date
+        description: End DateTime
         schema:
           type: string
       - name: end_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: end_min
         required: false
         in: query
-        description: Min. End Date
+        description: Min. End DateTime
         schema:
           type: string
       - name: start
         required: false
         in: query
-        description: Start Date
+        description: Start DateTime
         schema:
           type: string
       - name: start_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: start_min
         required: false
         in: query
-        description: Min. Start Date
+        description: Min. Start DateTime
+        schema:
+          type: string
+      - name: tags
+        required: false
+        in: query
+        description: tag
         schema:
           type: string
       responses:
@@ -1681,37 +1783,43 @@ paths:
       - name: end
         required: false
         in: query
-        description: End Date
+        description: End DateTime
         schema:
           type: string
       - name: end_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: end_min
         required: false
         in: query
-        description: Min. End Date
+        description: Min. End DateTime
         schema:
           type: string
       - name: start
         required: false
         in: query
-        description: Start Date
+        description: Start DateTime
         schema:
           type: string
       - name: start_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: start_min
         required: false
         in: query
-        description: Min. Start Date
+        description: Min. Start DateTime
+        schema:
+          type: string
+      - name: tags
+        required: false
+        in: query
+        description: tag
         schema:
           type: string
       requestBody:
@@ -1753,37 +1861,43 @@ paths:
       - name: end
         required: false
         in: query
-        description: End Date
+        description: End DateTime
         schema:
           type: string
       - name: end_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: end_min
         required: false
         in: query
-        description: Min. End Date
+        description: Min. End DateTime
         schema:
           type: string
       - name: start
         required: false
         in: query
-        description: Start Date
+        description: Start DateTime
         schema:
           type: string
       - name: start_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: start_min
         required: false
         in: query
-        description: Min. Start Date
+        description: Min. Start DateTime
+        schema:
+          type: string
+      - name: tags
+        required: false
+        in: query
+        description: tag
         schema:
           type: string
       requestBody:
@@ -1825,37 +1939,43 @@ paths:
       - name: end
         required: false
         in: query
-        description: End Date
+        description: End DateTime
         schema:
           type: string
       - name: end_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: end_min
         required: false
         in: query
-        description: Min. End Date
+        description: Min. End DateTime
         schema:
           type: string
       - name: start
         required: false
         in: query
-        description: Start Date
+        description: Start DateTime
         schema:
           type: string
       - name: start_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: start_min
         required: false
         in: query
-        description: Min. Start Date
+        description: Min. Start DateTime
+        schema:
+          type: string
+      - name: tags
+        required: false
+        in: query
+        description: tag
         schema:
           type: string
       responses:
@@ -1863,9 +1983,9 @@ paths:
           description: ''
       tags:
       - api
-  /api/temperature/:
+  /api/pumping/:
     get:
-      operationId: listTemperatures
+      operationId: listPumpings
       description: ''
       parameters:
       - name: limit
@@ -1902,6 +2022,295 @@ paths:
         required: false
         in: query
         description: Min. Date
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                    example: 123
+                  next:
+                    type: string
+                    nullable: true
+                    format: uri
+                    example: http://api.example.org/accounts/?offset=400&limit=100
+                  previous:
+                    type: string
+                    nullable: true
+                    format: uri
+                    example: http://api.example.org/accounts/?offset=200&limit=100
+                  results:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Pumping'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createPumping
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Pumping'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Pumping'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Pumping'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pumping'
+          description: ''
+      tags:
+      - api
+  /api/pumping/{id}/:
+    get:
+      operationId: retrievePumping
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Pumping.
+        schema:
+          type: string
+      - name: child
+        required: false
+        in: query
+        description: child
+        schema:
+          type: string
+      - name: date
+        required: false
+        in: query
+        description: Date
+        schema:
+          type: string
+      - name: date_max
+        required: false
+        in: query
+        description: Max. Date
+        schema:
+          type: string
+      - name: date_min
+        required: false
+        in: query
+        description: Min. Date
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pumping'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updatePumping
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Pumping.
+        schema:
+          type: string
+      - name: child
+        required: false
+        in: query
+        description: child
+        schema:
+          type: string
+      - name: date
+        required: false
+        in: query
+        description: Date
+        schema:
+          type: string
+      - name: date_max
+        required: false
+        in: query
+        description: Max. Date
+        schema:
+          type: string
+      - name: date_min
+        required: false
+        in: query
+        description: Min. Date
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Pumping'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Pumping'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Pumping'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pumping'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdatePumping
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Pumping.
+        schema:
+          type: string
+      - name: child
+        required: false
+        in: query
+        description: child
+        schema:
+          type: string
+      - name: date
+        required: false
+        in: query
+        description: Date
+        schema:
+          type: string
+      - name: date_max
+        required: false
+        in: query
+        description: Max. Date
+        schema:
+          type: string
+      - name: date_min
+        required: false
+        in: query
+        description: Min. Date
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Pumping'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Pumping'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Pumping'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pumping'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyPumping
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Pumping.
+        schema:
+          type: string
+      - name: child
+        required: false
+        in: query
+        description: child
+        schema:
+          type: string
+      - name: date
+        required: false
+        in: query
+        description: Date
+        schema:
+          type: string
+      - name: date_max
+        required: false
+        in: query
+        description: Max. Date
+        schema:
+          type: string
+      - name: date_min
+        required: false
+        in: query
+        description: Min. Date
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/temperature/:
+    get:
+      operationId: listTemperatures
+      description: ''
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      - name: child
+        required: false
+        in: query
+        description: child
+        schema:
+          type: string
+      - name: date
+        required: false
+        in: query
+        description: DateTime
+        schema:
+          type: string
+      - name: date_max
+        required: false
+        in: query
+        description: Max. DateTime
+        schema:
+          type: string
+      - name: date_min
+        required: false
+        in: query
+        description: Min. DateTime
+        schema:
+          type: string
+      - name: tags
+        required: false
+        in: query
+        description: tag
         schema:
           type: string
       responses:
@@ -1975,19 +2384,25 @@ paths:
       - name: date
         required: false
         in: query
-        description: Date
+        description: DateTime
         schema:
           type: string
       - name: date_max
         required: false
         in: query
-        description: Max. Date
+        description: Max. DateTime
         schema:
           type: string
       - name: date_min
         required: false
         in: query
-        description: Min. Date
+        description: Min. DateTime
+        schema:
+          type: string
+      - name: tags
+        required: false
+        in: query
+        description: tag
         schema:
           type: string
       responses:
@@ -2018,19 +2433,25 @@ paths:
       - name: date
         required: false
         in: query
-        description: Date
+        description: DateTime
         schema:
           type: string
       - name: date_max
         required: false
         in: query
-        description: Max. Date
+        description: Max. DateTime
         schema:
           type: string
       - name: date_min
         required: false
         in: query
-        description: Min. Date
+        description: Min. DateTime
+        schema:
+          type: string
+      - name: tags
+        required: false
+        in: query
+        description: tag
         schema:
           type: string
       requestBody:
@@ -2072,19 +2493,25 @@ paths:
       - name: date
         required: false
         in: query
-        description: Date
+        description: DateTime
         schema:
           type: string
       - name: date_max
         required: false
         in: query
-        description: Max. Date
+        description: Max. DateTime
         schema:
           type: string
       - name: date_min
         required: false
         in: query
-        description: Min. Date
+        description: Min. DateTime
+        schema:
+          type: string
+      - name: tags
+        required: false
+        in: query
+        description: tag
         schema:
           type: string
       requestBody:
@@ -2126,19 +2553,25 @@ paths:
       - name: date
         required: false
         in: query
-        description: Date
+        description: DateTime
         schema:
           type: string
       - name: date_max
         required: false
         in: query
-        description: Max. Date
+        description: Max. DateTime
         schema:
           type: string
       - name: date_min
         required: false
         in: query
-        description: Min. Date
+        description: Min. DateTime
+        schema:
+          type: string
+      - name: tags
+        required: false
+        in: query
+        description: tag
         schema:
           type: string
       responses:
@@ -2178,37 +2611,37 @@ paths:
       - name: end
         required: false
         in: query
-        description: End Date
+        description: End DateTime
         schema:
           type: string
       - name: end_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: end_min
         required: false
         in: query
-        description: Min. End Date
+        description: Min. End DateTime
         schema:
           type: string
       - name: start
         required: false
         in: query
-        description: Start Date
+        description: Start DateTime
         schema:
           type: string
       - name: start_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: start_min
         required: false
         in: query
-        description: Min. Start Date
+        description: Min. Start DateTime
         schema:
           type: string
       - name: user
@@ -2294,37 +2727,37 @@ paths:
       - name: end
         required: false
         in: query
-        description: End Date
+        description: End DateTime
         schema:
           type: string
       - name: end_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: end_min
         required: false
         in: query
-        description: Min. End Date
+        description: Min. End DateTime
         schema:
           type: string
       - name: start
         required: false
         in: query
-        description: Start Date
+        description: Start DateTime
         schema:
           type: string
       - name: start_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: start_min
         required: false
         in: query
-        description: Min. Start Date
+        description: Min. Start DateTime
         schema:
           type: string
       - name: user
@@ -2367,37 +2800,37 @@ paths:
       - name: end
         required: false
         in: query
-        description: End Date
+        description: End DateTime
         schema:
           type: string
       - name: end_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: end_min
         required: false
         in: query
-        description: Min. End Date
+        description: Min. End DateTime
         schema:
           type: string
       - name: start
         required: false
         in: query
-        description: Start Date
+        description: Start DateTime
         schema:
           type: string
       - name: start_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: start_min
         required: false
         in: query
-        description: Min. Start Date
+        description: Min. Start DateTime
         schema:
           type: string
       - name: user
@@ -2451,37 +2884,37 @@ paths:
       - name: end
         required: false
         in: query
-        description: End Date
+        description: End DateTime
         schema:
           type: string
       - name: end_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: end_min
         required: false
         in: query
-        description: Min. End Date
+        description: Min. End DateTime
         schema:
           type: string
       - name: start
         required: false
         in: query
-        description: Start Date
+        description: Start DateTime
         schema:
           type: string
       - name: start_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: start_min
         required: false
         in: query
-        description: Min. Start Date
+        description: Min. Start DateTime
         schema:
           type: string
       - name: user
@@ -2535,37 +2968,37 @@ paths:
       - name: end
         required: false
         in: query
-        description: End Date
+        description: End DateTime
         schema:
           type: string
       - name: end_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: end_min
         required: false
         in: query
-        description: Min. End Date
+        description: Min. End DateTime
         schema:
           type: string
       - name: start
         required: false
         in: query
-        description: Start Date
+        description: Start DateTime
         schema:
           type: string
       - name: start_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: start_min
         required: false
         in: query
-        description: Min. Start Date
+        description: Min. Start DateTime
         schema:
           type: string
       - name: user
@@ -2605,37 +3038,43 @@ paths:
       - name: end
         required: false
         in: query
-        description: End Date
+        description: End DateTime
         schema:
           type: string
       - name: end_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: end_min
         required: false
         in: query
-        description: Min. End Date
+        description: Min. End DateTime
         schema:
           type: string
       - name: start
         required: false
         in: query
-        description: Start Date
+        description: Start DateTime
         schema:
           type: string
       - name: start_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: start_min
         required: false
         in: query
-        description: Min. Start Date
+        description: Min. Start DateTime
+        schema:
+          type: string
+      - name: tags
+        required: false
+        in: query
+        description: tag
         schema:
           type: string
       responses:
@@ -2709,37 +3148,43 @@ paths:
       - name: end
         required: false
         in: query
-        description: End Date
+        description: End DateTime
         schema:
           type: string
       - name: end_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: end_min
         required: false
         in: query
-        description: Min. End Date
+        description: Min. End DateTime
         schema:
           type: string
       - name: start
         required: false
         in: query
-        description: Start Date
+        description: Start DateTime
         schema:
           type: string
       - name: start_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: start_min
         required: false
         in: query
-        description: Min. Start Date
+        description: Min. Start DateTime
+        schema:
+          type: string
+      - name: tags
+        required: false
+        in: query
+        description: tag
         schema:
           type: string
       responses:
@@ -2770,37 +3215,43 @@ paths:
       - name: end
         required: false
         in: query
-        description: End Date
+        description: End DateTime
         schema:
           type: string
       - name: end_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: end_min
         required: false
         in: query
-        description: Min. End Date
+        description: Min. End DateTime
         schema:
           type: string
       - name: start
         required: false
         in: query
-        description: Start Date
+        description: Start DateTime
         schema:
           type: string
       - name: start_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: start_min
         required: false
         in: query
-        description: Min. Start Date
+        description: Min. Start DateTime
+        schema:
+          type: string
+      - name: tags
+        required: false
+        in: query
+        description: tag
         schema:
           type: string
       requestBody:
@@ -2842,37 +3293,43 @@ paths:
       - name: end
         required: false
         in: query
-        description: End Date
+        description: End DateTime
         schema:
           type: string
       - name: end_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: end_min
         required: false
         in: query
-        description: Min. End Date
+        description: Min. End DateTime
         schema:
           type: string
       - name: start
         required: false
         in: query
-        description: Start Date
+        description: Start DateTime
         schema:
           type: string
       - name: start_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: start_min
         required: false
         in: query
-        description: Min. Start Date
+        description: Min. Start DateTime
+        schema:
+          type: string
+      - name: tags
+        required: false
+        in: query
+        description: tag
         schema:
           type: string
       requestBody:
@@ -2914,37 +3371,43 @@ paths:
       - name: end
         required: false
         in: query
-        description: End Date
+        description: End DateTime
         schema:
           type: string
       - name: end_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: end_min
         required: false
         in: query
-        description: Min. End Date
+        description: Min. End DateTime
         schema:
           type: string
       - name: start
         required: false
         in: query
-        description: Start Date
+        description: Start DateTime
         schema:
           type: string
       - name: start_max
         required: false
         in: query
-        description: Max. End Date
+        description: Max. End DateTime
         schema:
           type: string
       - name: start_min
         required: false
         in: query
-        description: Min. Start Date
+        description: Min. Start DateTime
+        schema:
+          type: string
+      - name: tags
+        required: false
+        in: query
+        description: tag
         schema:
           type: string
       responses:
@@ -3844,6 +4307,229 @@ paths:
           description: ''
       tags:
       - api
+  /api/tags/:
+    get:
+      operationId: listTags
+      description: ''
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      - name: last_used
+        required: false
+        in: query
+        description: last_used
+        schema:
+          type: string
+      - name: name
+        required: false
+        in: query
+        description: name
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                    example: 123
+                  next:
+                    type: string
+                    nullable: true
+                    format: uri
+                    example: http://api.example.org/accounts/?offset=400&limit=100
+                  previous:
+                    type: string
+                    nullable: true
+                    format: uri
+                    example: http://api.example.org/accounts/?offset=200&limit=100
+                  results:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Tag'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createTag
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Tag'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Tag'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Tag'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Tag'
+          description: ''
+      tags:
+      - api
+  /api/tags/{slug}/:
+    get:
+      operationId: retrieveTag
+      description: ''
+      parameters:
+      - name: slug
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: last_used
+        required: false
+        in: query
+        description: last_used
+        schema:
+          type: string
+      - name: name
+        required: false
+        in: query
+        description: name
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Tag'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateTag
+      description: ''
+      parameters:
+      - name: slug
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: last_used
+        required: false
+        in: query
+        description: last_used
+        schema:
+          type: string
+      - name: name
+        required: false
+        in: query
+        description: name
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Tag'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Tag'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Tag'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Tag'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateTag
+      description: ''
+      parameters:
+      - name: slug
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: last_used
+        required: false
+        in: query
+        description: last_used
+        schema:
+          type: string
+      - name: name
+        required: false
+        in: query
+        description: name
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Tag'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Tag'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Tag'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Tag'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyTag
+      description: ''
+      parameters:
+      - name: slug
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: last_used
+        required: false
+        in: query
+        description: last_used
+        schema:
+          type: string
+      - name: name
+        required: false
+        in: query
+        description: name
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
   /api/timers/{id}/restart/:
     patch:
       operationId: restartTimer
@@ -3962,6 +4648,8 @@ components:
         notes:
           type: string
           nullable: true
+        tags:
+          type: string
       required:
       - child
       - time
@@ -4007,6 +4695,8 @@ components:
         notes:
           type: string
           nullable: true
+        tags:
+          type: string
       required:
       - type
       - method
@@ -4023,6 +4713,8 @@ components:
         time:
           type: string
           format: date-time
+        tags:
+          type: string
       required:
       - child
       - note
@@ -4050,6 +4742,28 @@ components:
         notes:
           type: string
           nullable: true
+        tags:
+          type: string
+    Pumping:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        child:
+          type: integer
+        amount:
+          type: number
+        time:
+          type: string
+          format: date-time
+        notes:
+          type: string
+          nullable: true
+      required:
+      - child
+      - amount
+      - time
     Temperature:
       type: object
       properties:
@@ -4066,6 +4780,8 @@ components:
         notes:
           type: string
           nullable: true
+        tags:
+          type: string
       required:
       - child
       - temperature
@@ -4120,6 +4836,8 @@ components:
         milestone:
           type: string
           maxLength: 255
+        tags:
+          type: string
     Weight:
       type: object
       properties:
@@ -4136,6 +4854,8 @@ components:
         notes:
           type: string
           nullable: true
+        tags:
+          type: string
       required:
       - child
       - weight
@@ -4156,6 +4876,8 @@ components:
         notes:
           type: string
           nullable: true
+        tags:
+          type: string
       required:
       - child
       - height
@@ -4176,6 +4898,8 @@ components:
         notes:
           type: string
           nullable: true
+        tags:
+          type: string
       required:
       - child
       - head_circumference
@@ -4196,7 +4920,29 @@ components:
         notes:
           type: string
           nullable: true
+        tags:
+          type: string
       required:
       - child
       - bmi
       - date
+    Tag:
+      type: object
+      properties:
+        slug:
+          type: string
+          readOnly: true
+          pattern: ^[-a-zA-Z0-9_]+$
+        name:
+          type: string
+          maxLength: 100
+        color:
+          type: string
+          pattern: ^#[0-9a-fA-F]{6}$
+          maxLength: 32
+        last_used:
+          type: string
+          format: date-time
+          readOnly: true
+      required:
+      - name

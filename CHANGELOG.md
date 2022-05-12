@@ -1,5 +1,93 @@
 # Changelog
 
+## [v1.10.2](https://github.com/babybuddy/babybuddy/tree/v1.10.2) (2022-03-03)
+
+[Full Changelog](https://github.com/babybuddy/babybuddy/compare/v1.10.1...v1.10.2)
+
+**Implemented enhancements:**
+
+- Document Docker + NGINX HTTPS config [\#407](https://github.com/babybuddy/babybuddy/issues/407)
+- Create custom `CSRF_FAILURE_VIEW` with details about how to resolve the issue [\#402](https://github.com/babybuddy/babybuddy/issues/402)
+- Host in a subfolder / different root path [\#186](https://github.com/babybuddy/babybuddy/issues/186)
+- All the words have been translated into Chinese. [\#405](https://github.com/babybuddy/babybuddy/pull/405) ([gesisirus](https://github.com/gesisirus))
+- Update Spanish translations [\#404](https://github.com/babybuddy/babybuddy/pull/404) ([Alberdi](https://github.com/Alberdi))
+- Improve 403 Bad Origin and other error templates [\#403](https://github.com/babybuddy/babybuddy/pull/403) ([cdubz](https://github.com/cdubz))
+
+**Fixed bugs:**
+
+- v1.9.0 update to manual timer edit makes mobile UX worse [\#385](https://github.com/babybuddy/babybuddy/issues/385)
+- Graph selection has unreachable areas on mobile [\#379](https://github.com/babybuddy/babybuddy/issues/379)
+- "Time since" using Django time zone and not user time zone [\#178](https://github.com/babybuddy/babybuddy/issues/178)
+
+**Closed issues:**
+
+- HTTPS doesn't seem to be working...? [\#406](https://github.com/babybuddy/babybuddy/issues/406)
+- Add documentation about proxy setup [\#394](https://github.com/babybuddy/babybuddy/issues/394)
+- Remove/Change Drop-down Options [\#389](https://github.com/babybuddy/babybuddy/issues/389)
+
+## [v1.10.1](https://github.com/babybuddy/babybuddy/tree/v1.10.1) (2022-02-22)
+
+[Full Changelog](https://github.com/babybuddy/babybuddy/compare/v1.10.0...v1.10.1)
+
+**Implemented enhancements:**
+
+- Add Chinese \(simplified\) translations [\#399](https://github.com/babybuddy/babybuddy/pull/399) ([cdubz](https://github.com/cdubz))
+- Use "secret" generator for `DISABLE_COLLECTSTATIC` in Heroku [\#398](https://github.com/babybuddy/babybuddy/pull/398) ([cdubz](https://github.com/cdubz))
+
+**Fixed bugs:**
+
+- CSRF Error \(403\) When Adding Entry \(v1.10.0\) [\#393](https://github.com/babybuddy/babybuddy/issues/393)
+
+**Closed issues:**
+
+- Heroku Server Error \(500\) [\#395](https://github.com/babybuddy/babybuddy/issues/395)
+
+**Merged pull requests:**
+
+- Additional Dutch translations [\#397](https://github.com/babybuddy/babybuddy/pull/397) ([Gitoffomalawn](https://github.com/Gitoffomalawn))
+
+## [v1.10.0](https://github.com/babybuddy/babybuddy/tree/v1.10.0) (2022-02-16)
+
+[Full Changelog](https://github.com/babybuddy/babybuddy/compare/v1.9.3...v1.10.0)
+
+**Implemented enhancements:**
+
+- Feature Request:  Track baby height [\#191](https://github.com/babybuddy/babybuddy/issues/191)
+- Hardcoded English strings on timeline [\#352](https://github.com/babybuddy/babybuddy/issues/352)
+- breakout feeding types [\#384](https://github.com/babybuddy/babybuddy/pull/384) ([alzyee](https://github.com/alzyee))
+- Rearrange dashboard cards to set timer card first [\#382](https://github.com/babybuddy/babybuddy/pull/382) ([adamaze](https://github.com/adamaze))
+- Update to Django 4.x [\#378](https://github.com/babybuddy/babybuddy/pull/378) ([cdubz](https://github.com/cdubz))
+- Updated Italian translation [\#376](https://github.com/babybuddy/babybuddy/pull/376) ([nos86](https://github.com/nos86))
+- Fix ordering of start/stop items when start and stop times are the same [\#372](https://github.com/babybuddy/babybuddy/pull/372) ([MrApplejuice](https://github.com/MrApplejuice))
+- Fix German translation mistake [\#368](https://github.com/babybuddy/babybuddy/pull/368) ([MrApplejuice](https://github.com/MrApplejuice))
+- Add timer restart and stop triggers to REST-API [\#367](https://github.com/babybuddy/babybuddy/pull/367) ([MrApplejuice](https://github.com/MrApplejuice))
+- Optional last name [\#361](https://github.com/babybuddy/babybuddy/pull/361) ([Alberdi](https://github.com/Alberdi))
+- Add Height, Head Circumference, and BMI [\#360](https://github.com/babybuddy/babybuddy/pull/360) ([Daegalus](https://github.com/Daegalus))
+- Improve iOS webapp/clip/pwa experience [\#359](https://github.com/babybuddy/babybuddy/pull/359) ([cdubz](https://github.com/cdubz))
+- Convert envir variables that are supposed to be boolean to boolean [\#356](https://github.com/babybuddy/babybuddy/pull/356) ([MagiX13](https://github.com/MagiX13))
+
+**Fixed bugs:**
+
+- iOS 15 web app experience is degraded [\#357](https://github.com/babybuddy/babybuddy/issues/357)
+- Boolean environmental variables  [\#354](https://github.com/babybuddy/babybuddy/issues/354)
+- Sleep graph has incorrect positioning when there is a gap in days. [\#286](https://github.com/babybuddy/babybuddy/issues/286)
+- Sleep graph issues [\#283](https://github.com/babybuddy/babybuddy/issues/283)
+- KeyError at /children/XXX/reports/sleep/pattern/ [\#211](https://github.com/babybuddy/babybuddy/issues/211)
+- fix\(sleep-reports\): \#286 Init all days in the period to remove gaps [\#341](https://github.com/babybuddy/babybuddy/pull/341) ([codisart](https://github.com/codisart))
+
+**Closed issues:**
+
+- Show type breakdown on feeding\_amounts report [\#383](https://github.com/babybuddy/babybuddy/issues/383)
+- Error during add/edit action for fed and diaper [\#374](https://github.com/babybuddy/babybuddy/issues/374)
+- Evaluate replacements for Easy Thumbnails [\#373](https://github.com/babybuddy/babybuddy/issues/373)
+- Issue with timer API for Feeding, Sleep, and Tummy-Time [\#363](https://github.com/babybuddy/babybuddy/issues/363)
+
+**Merged pull requests:**
+
+- Hide feeding\_day card when no information present [\#386](https://github.com/babybuddy/babybuddy/pull/386) ([BenjaminHae](https://github.com/BenjaminHae))
+- add HA Addon link [\#375](https://github.com/babybuddy/babybuddy/pull/375) ([OttPeterR](https://github.com/OttPeterR))
+- Minor changes to run into subdir [\#358](https://github.com/babybuddy/babybuddy/pull/358) ([MagiX13](https://github.com/MagiX13))
+
 ## [v1.9.3](https://github.com/babybuddy/babybuddy/tree/v1.9.3) (2021-12-14)
 
 [Full Changelog](https://github.com/babybuddy/babybuddy/compare/v1.9.2...v1.9.3)

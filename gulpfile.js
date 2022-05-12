@@ -1,17 +1,18 @@
-var gulp = require('gulp');
+const gulp = require('gulp');
 
-var concat = require('gulp-concat');
-var del = require('del');
-var es = require('child_process').execSync;
-var flatten = require('gulp-flatten');
-var fontello = require('gulp-fontello');
-var pump = require('pump');
-var sass = require('gulp-sass')(require('sass'));
-var sassGlob = require('gulp-sass-glob');
-var styleLint = require('gulp-stylelint');
-var spawn = require('child_process').spawn;
+const concat = require('gulp-concat');
+const del = require('del');
+const es = require('child_process').execSync;
+const flatten = require('gulp-flatten');
+const fontello = require('gulp-fontello');
+const pump = require('pump');
+const removeSourcemaps = require('gulp-remove-sourcemaps');
+const sass = require('gulp-sass')(require('sass'));
+const sassGlob = require('gulp-sass-glob');
+const styleLint = require('gulp-stylelint');
+const spawn = require('child_process').spawn;
 
-var config = require('./gulpfile.config.js');
+const config = require('./gulpfile.config.js');
 
 /**
  * Support functions for Gulp tasks.
@@ -146,12 +147,21 @@ function extras(cb) {
 }
 
 /**
+ * Runs Black formatting on Python code.
+ *
+ * @param cb
+ */
+function format(cb) {
+    _runInPipenv(['black', '.'], cb);
+}
+
+/**
  * Runs linting on Python and SASS code.
  *
  * @param cb
  */
 function lint(cb) {
-    _runInPipenv(['flake8', '--exclude=.venv,etc,migrations,manage.py,node_modules,settings'], cb);
+    _runInPipenv(['black', '.', '--check', '--diff', '--color'], cb);
 
     pump([
         gulp.src(config.watchConfig.stylesGlob),
@@ -171,19 +181,28 @@ function lint(cb) {
 function scripts(cb) {
     pump([
         gulp.src(config.scriptsConfig.vendor),
+        removeSourcemaps(),
         concat('vendor.js'),
         gulp.dest(config.scriptsConfig.dest)
     ], cb);
 
     pump([
         gulp.src(config.scriptsConfig.graph),
+        removeSourcemaps(),
         concat('graph.js'),
         gulp.dest(config.scriptsConfig.dest)
     ], cb);
 
     pump([
         gulp.src(config.scriptsConfig.app),
+        removeSourcemaps(),
         concat('app.js'),
+        gulp.dest(config.scriptsConfig.dest)
+    ], cb);
+
+    pump([
+        gulp.src(config.scriptsConfig.tags_editor),
+        concat('tags_editor.js'),
         gulp.dest(config.scriptsConfig.dest)
     ], cb);
 }
@@ -209,7 +228,7 @@ function styles(cb) {
  * @param cb
  */
 function test(cb) {
-    var command = [
+    let command = [
         'run',
         'python',
         'manage.py',
@@ -262,12 +281,12 @@ function watch() {
  */
 
 gulp.task('collectstatic', function(cb) {
-    var command = ['run', 'python', 'manage.py', 'collectstatic'];
+    let command = ['run', 'python', 'manage.py', 'collectstatic'];
 
     /* Use base settings if no settings parameter is supplied. */
-    var parameters = process.argv.splice(3);
-    var noSettings = true;
-    for (var i = 0; i < parameters.length; i++) {
+    const parameters = process.argv.splice(3);
+    let noSettings = true;
+    for (let i = 0; i < parameters.length; i++) {
         if (parameters[i].substring(0, 10) === '--settings') {
             noSettings = false;
             break;
@@ -310,15 +329,15 @@ gulp.task('reset', function(cb) {
 });
 
 gulp.task('runserver', function(cb) {
-    var command = ['run', 'python', 'manage.py', 'runserver'];
+    let command = ['run', 'python', 'manage.py', 'runserver'];
 
     /**
      * Process any parameters. Any arguments found here will be removed from
      * the parameters list so other parameters continue to be passed to the
      * command.
      **/
-    var parameters = process.argv.splice(2);
-    for (var i = 0; i < parameters.length; i++) {
+    const parameters = process.argv.splice(2);
+    for (let i = 0; i < parameters.length; i++) {
         /* May be included because this is the default gulp command. */
         if (parameters[i] === 'runserver') {
             delete parameters[i];
@@ -365,6 +384,8 @@ gulp.task('docs:deploy', docsDeploy);
 gulp.task('docs:watch', docsWatch);
 
 gulp.task('extras', extras);
+
+gulp.task('format', format);
 
 gulp.task('lint', lint);
 

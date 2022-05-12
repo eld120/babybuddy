@@ -7,6 +7,7 @@
 [![CI Status](https://github.com/babybuddy/babybuddy/actions/workflows/ci.yml/badge.svg)](https://github.com/babybuddy/babybuddy/actions/workflows/ci.yml)
 [![Coverage Status](https://coveralls.io/repos/github/babybuddy/babybuddy/badge.svg?branch=master)](https://coveralls.io/github/babybuddy/babybuddy?branch=master)
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/babybuddy/babybuddy)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 A buddy for babies! Helps caregivers track sleep, feedings, diaper changes, 
 tummy time and more to learn about and predict baby's needs without (*as much*)
@@ -38,10 +39,14 @@ Visit [https://docs.baby-buddy.net](https://docs.baby-buddy.net) for full docume
 
 Baby Buddy is available in a variety of languages thanks to the efforts of numerous
 translators. Language can be set on a per-user basis from the user settings page
-(`/user/settings/`). See [Contributing](https://docs.baby-buddy.net/contributing/#translation)
+(`/user/settings/`). See [Contributing](https://docs.baby-buddy.net/contributing/translation/)
 for information about how to create/update translations.
 
 ### Available languages
+
+:es: Catalan
+
+:cn: Chinese (simplified)
 
 :netherlands: Dutch
 
@@ -74,6 +79,7 @@ or use Baby Buddy in fun ways. If you have a project to share please open a PR
 adding it here or reach out via GitHub Issues or Discussions or on Gitter!
 
 - [Home Assistant integration](https://github.com/jcgoette/baby_buddy_homeassistant)
+- [Home Assistant Addon (host Baby Buddy on your Home Assistant)](https://github.com/OttPeterR/addon-babybuddy)
 - [Baby Buddy and Home Assistant](https://martinnoah.com/babybuddy-and-home-assistant.html) (how-to guide)
 - [Bottle Scale for BabyBuddy and Home Assistant with ESPHome](https://github.com/sfgabe/OITProjects/tree/master/BabyBuddy_ESP_HASS)
 - [Alexa skill](https://github.com/babybuddy/babybuddy-alexa-skill)

@@ -21,6 +21,17 @@
       "picture": ""
     }
   },
+    {
+    "model": "core.pumping",
+    "pk": 1,
+    "fields":
+    {
+      "child": 1,
+      "amount": 50.0,
+      "time": "2017-11-17T17:52:00Z",
+      "notes": "new device"
+    }
+  },
   {
     "model": "core.diaperchange",
     "pk": 2,
@@ -461,6 +472,17 @@
       "bmi": 26.5,
       "date": "2017-11-18",
       "notes": "before feed"
+    }
+  },
+  {
+    "model": "core.tag",
+    "pk": 1,
+    "fields":
+    {
+      "name": "a name",
+      "slug": "a-name",
+      "color": "#FF0000",
+      "last_used": "2017-11-18T16:00:00Z"
     }
   }
 ]

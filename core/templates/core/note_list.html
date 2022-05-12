@@ -27,6 +27,7 @@
                         <th>{% trans "Child" %}</th>
                     {% endif %}
                     <th>{% trans "Note" %}</th>
+                    <th>{% trans "Tags" %}</th>
                 </tr>
             </thead>
             <tbody>
@@ -54,6 +55,9 @@
                             <td><a href="{% url 'core:child' note.child.slug %}">{{ note.child }}</a></td>
                         {% endif %}
                         <td>{{ note.note }}</td>
+                        <td>
+                            {% include "core/render_tag_list.html" with tags=note.tags.all %}
+                        </td>
                     </tr>
                 {% empty %}
                     <tr>

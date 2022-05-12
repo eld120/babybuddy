@@ -1,14 +1,40 @@
 extra_css:
   - css/extras.css
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+nav:
+  - 'index.md'
+  - 'Setup':
+      - 'setup/deployment.md'
+      - 'setup/configuration.md'
+      - 'setup/ssl.md'
+      - 'setup/subdirectory.md'
+      - 'setup/proxy.md'
+  - 'User Guide':
+    - 'user-guide/getting-started.md'
+    - 'user-guide/managing-users.md'
+    - 'user-guide/adding-entries.md'
+    - 'user-guide/using-timers.md'
+  - 'Contributing':
+      - 'contributing/development-environment.md'
+      - 'contributing/translation.md'
+      - 'contributing/pull-requests.md'
+      - 'contributing/gulp-command-reference.md'
+  - 'import-export.md'
+  - 'api.md'
 theme:
   name: material
-  favicon: assets/favicon.svg
+  favicon: assets/images/favicon.svg
   features:
+    - navigation.expand
     - navigation.instant
     - navigation.tracking
     - search.share
     - search.suggest
-  logo: assets/logo.svg
+  logo: assets/images/logo.svg
   palette:
     scheme: slate
 repo_name: babybuddy/babybuddy
