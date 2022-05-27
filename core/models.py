@@ -355,7 +355,6 @@ class Sleep(models.Model):
 
     def clean(self):
         validate_time(self.start, 'start')
-        validate_time(self.end, 'end')
         validate_duration(self)
         validate_unique_period(Sleep.objects.filter(child=self.child), self)
 
