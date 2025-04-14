@@ -8,8 +8,8 @@
 [![Coverage Status](https://coveralls.io/repos/github/babybuddy/babybuddy/badge.svg?branch=master)](https://coveralls.io/github/babybuddy/babybuddy?branch=master)
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/babybuddy/babybuddy)
 
-A buddy for babies! Helps caregivers track sleep, feedings, diaper changes, 
-tummy time and more to learn about and predict baby's needs without (*as much*)
+A buddy for babies! Helps caregivers track sleep, feedings, diaper changes,
+tummy time and more to learn about and predict baby's needs without (_as much_)
 guess work.
 
 ![Baby Buddy desktop view](screenshot.png)
@@ -47,7 +47,7 @@ for information about how to create/update translations.
 
 :uk: English (U.K.)
 
-:us: English (U.S.) *(base)*
+:us: English (U.S.) _(base)_
 
 :finland: Finnish
 
@@ -85,3 +85,16 @@ adding it here or reach out via GitHub Issues or Discussions or on Gitter!
 
 See [SECURITY.md](SECURITY.md) for information about where and how to report
 potential Baby Buddy vulnerabilities.
+
+## Getting Started with Local Development (Docker)
+
+This guide helps you set up a local development environment for Baby Buddy using Docker and Docker Compose. This is the recommended way to run Baby Buddy locally for development or testing.
+
+- build : `docker compose -f local.yml build`
+- run : `docker compose -f local.yml up -d`
+- The site should be running locally here: **http://localhost:8085/**
+- run migrations: `docker compose -f local.yml run --rm django python manage.py migrate`
+- create superuser: `docker compose -f local.yml run --rm django python manage.py createsuperuser`
+- create db cache `docker compose -f local.yml run --rm django python manage.py createcachetable`
+
+You can now use the superuse to log in and interact with the app

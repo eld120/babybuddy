@@ -386,43 +386,43 @@ LOGGING = {
     },
 }
 
+if not DEBUG:
+        # EMAIL
+        # ------------------------------------------------------------------------------
+        # https://docs.djangoproject.com/en/dev/ref/settings/#email-backend
+    EMAIL_BACKEND = env(
+        "DJANGO_EMAIL_BACKEND", default="django.core.mail.backends.console.EmailBackend"
+    )
 
-# EMAIL
-# ------------------------------------------------------------------------------
-# https://docs.djangoproject.com/en/dev/ref/settings/#email-backend
-EMAIL_BACKEND = env(
-    "DJANGO_EMAIL_BACKEND", default="django.core.mail.backends.console.EmailBackend"
-)
+    ANYMAIL = {
+        "SENDGRID_API_KEY": env("SENDGRID_API_KEY"),
+    }
 
-ANYMAIL = {
-    "SENDGRID_API_KEY": env("SENDGRID_API_KEY"),
-}
+    # Sentry
+    # ------------------------------------------------------------------------------
+    SENTRY_DSN = env("SENTRY_DSN")
+    SENTRY_LOG_LEVEL = env.int("DJANGO_SENTRY_LOG_LEVEL", logging.INFO)
 
-# Sentry
-# ------------------------------------------------------------------------------
-SENTRY_DSN = env("SENTRY_DSN")
-SENTRY_LOG_LEVEL = env.int("DJANGO_SENTRY_LOG_LEVEL", logging.INFO)
-
-sentry_logging = LoggingIntegration(
-    level=SENTRY_LOG_LEVEL,  # Capture info and above as breadcrumbs
-    event_level=logging.ERROR,  # Send errors as events
-)
-integrations = [
-    sentry_logging,
-    DjangoIntegration(),
-    
-]
-sentry_sdk.init(
-    dsn=SENTRY_DSN,
-    integrations=integrations,
-    environment=env("SENTRY_ENVIRONMENT", default="production"),
-    #traces_sample_rate=env.float("SENTRY_TRACES_SAMPLE_RATE", default=0.0),
-    traces_sample_rate=1.0
-)
+    sentry_logging = LoggingIntegration(
+        level=SENTRY_LOG_LEVEL,  # Capture info and above as breadcrumbs
+        event_level=logging.ERROR,  # Send errors as events
+    )
+    integrations = [
+        sentry_logging,
+        DjangoIntegration(),
+        
+    ]
+    sentry_sdk.init(
+        dsn=SENTRY_DSN,
+        integrations=integrations,
+        environment=env("SENTRY_ENVIRONMENT", default="production"),
+        #traces_sample_rate=env.float("SENTRY_TRACES_SAMPLE_RATE", default=0.0),
+        traces_sample_rate=1.0
+    )
 
 ADMIN_URL = env("DJANGO_ADMIN_URL")
 
-if DEBUG == True:
+if DEBUG:
     from .base import *
     from .base import env
 
